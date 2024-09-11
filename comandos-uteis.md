@@ -21,6 +21,9 @@ kubectl delete pod -l versao=azul
 kubectl apply -f meuprimeiroreplicaset.yml
 # Listar Replicaset
 kubectl get replicaset
-
+# descrever Replicaset
+kubectl describe replicaset meuprimeiroreplicaset
+# escalar Replicaser
+kubectl scale replicaset meuprimeiroreplicaset --replicas=3
 
 
