@@ -25,5 +25,27 @@ kubectl get replicaset
 kubectl describe replicaset meuprimeiroreplicaset
 # escalar Replicaser
 kubectl scale replicaset meuprimeiroreplicaset --replicas=3
+# listar versão deployments
+kubectl rollout history deployment meuprimeirodeployment
+# Retornar a versão deployment
+kubectl rollout undo deployment meuprimeirodeployment
+# Retornar deployment de uma imagem especifica 
+kubectl set image deployment meuprimeirodeployment meucontainer=kubedevio/nginx-color:green
+# Listar services
+kubectl get services
+# Comando teste aula services
+docker container run --rm kubedevio/ubuntu-curl curl http://10.116.0.2:32063/temperatura/fahrenheitparacelsius/100 
+kubectl run -i --tty --image kubedevio/ubuntu-curl ping-teste --restart=Never --rm -- /bin/sh
+curl http://10.116.0.2:32063/temperatura/fahrenheitparacelsius/100 
+curl http://api-service/temperatura/fahrenheitparacelsius/100 
+# Listar todos os componetens
+kubectl get all
+# Listar endpoint
+kubectl get endpoints
+
+
+
+
+
 
 
