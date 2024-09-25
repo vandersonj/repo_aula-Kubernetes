@@ -50,8 +50,13 @@ kubectl describe configmap
 kubectl create configmap literal-configmap --from-literal=Mongo__Host=mongo-service
 # Criar configMap via linha de comando usando um arquivo
 kubectl create configmap file-configmap --from-file=prometheus.yaml
-
-
+# Criar secret via linha de comando
+kubectl create secret generic literal-secret --from-literal=Mongo__PWD=mongo-password
+# Criar secret via linha de comando usando um arquivo
+kubectl create secret file-configmap --from-file=prometheus.yaml
+# Criar Secret Docker registry
+ kubectl create secret docker-registry digital-registry --docker-server='domain.com/repo' --docker-username=user-docker --docker-password='Password-or-TOKEN' --docker-email=login@domain.com
+#
 
 
 
