@@ -42,7 +42,14 @@ curl http://api-service/temperatura/fahrenheitparacelsius/100
 kubectl get all
 # Listar endpoint
 kubectl get endpoints
-
+# Listar ConfigMaps
+kubectl get configmap
+# Detalhes do Configmap
+kubectl describe configmap
+# Criar configMap via linha de comando
+kubectl create configmap literal-configmap --from-literal=Mongo__Host=mongo-service
+# Criar configMap via linha de comando usando um arquivo
+kubectl create configmap file-configmap --from-file=prometheus.yaml
 
 
 
