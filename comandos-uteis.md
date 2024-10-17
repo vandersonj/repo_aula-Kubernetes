@@ -56,6 +56,8 @@ kubectl create secret generic literal-secret --from-literal=Mongo__PWD=mongo-pas
 kubectl create secret file-configmap --from-file=prometheus.yaml
 # Criar Secret Docker registry
  kubectl create secret docker-registry digital-registry --docker-server='domain.com/repo' --docker-username=user-docker --docker-password='Password-or-TOKEN' --docker-email=login@domain.com
+# Consultar recursos pod
+Kubectl top pods
 #
 
 
